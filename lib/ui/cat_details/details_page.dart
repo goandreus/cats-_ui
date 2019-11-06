@@ -15,14 +15,14 @@ class CatDetailsPage extends StatefulWidget {
   });
 
   @override
-  _CatDetailsPageState createState() => new _CatDetailsPageState();
+  _CatDetailsPageState createState() =>  _CatDetailsPageState();
 }
 
 class _CatDetailsPageState extends State<CatDetailsPage> {
   @override
   Widget build(BuildContext context) {
-    var linearGradient = new BoxDecoration(
-      gradient: new LinearGradient(
+    var linearGradient =  BoxDecoration(
+      gradient:  LinearGradient(
         begin: FractionalOffset.centerRight,
         end: FractionalOffset.bottomLeft,
         colors: [
@@ -32,22 +32,22 @@ class _CatDetailsPageState extends State<CatDetailsPage> {
       ),
     );
 
-    return new Scaffold(
-      body: new SingleChildScrollView(
-        child: new Container(
+    return  Scaffold(
+      body:  SingleChildScrollView(
+        child:  Container(
           decoration: linearGradient,
-          child: new Column(
+          child:  Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              new CatDetailHeader(
+               CatDetailHeader(
                 widget.cat,
                 avatarTag: widget.avatarTag,
               ),
-              new Padding(
+               Padding(
                 padding: const EdgeInsets.all(24.0),
-                child: new CatDetailBody(widget.cat),
+                child:  CatDetailBody(widget.cat),
               ),
-              new CatShowcase(widget.cat),
+               CatShowcase(widget.cat),
             ],
           ),
         ),

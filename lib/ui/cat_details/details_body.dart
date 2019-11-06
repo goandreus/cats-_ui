@@ -7,11 +7,11 @@ class CatDetailBody extends StatelessWidget {
   CatDetailBody(this.cat);
 
   _createCircleBadge(IconData iconData, Color color) {
-    return new Padding(
+    return  Padding(
       padding: const EdgeInsets.only(left: 8.0),
-      child: new CircleAvatar(
+      child:  CircleAvatar(
         backgroundColor: color,
-        child: new Icon(
+        child:  Icon(
           iconData,
           color: Colors.white,
           size: 16.0,
@@ -26,16 +26,16 @@ class CatDetailBody extends StatelessWidget {
     var theme = Theme.of(context);
     var textTheme = theme.textTheme;
 
-    var locationInfo = new Row(
+    var locationInfo =  Row(
       children: [
-        new Icon(
+         Icon(
           Icons.place,
           color: Colors.white,
           size: 16.0,
         ),
-        new Padding(
+         Padding(
           padding: const EdgeInsets.only(left: 8.0),
-          child: new Text(
+          child:  Text(
             cat.location,
             style: textTheme.subhead.copyWith(color: Colors.white),
           ),
@@ -43,29 +43,29 @@ class CatDetailBody extends StatelessWidget {
       ],
     );
 
-    return new Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        new Text(
+         Text(
           cat.name,
           style: textTheme.headline.copyWith(color: Colors.white),
         ),
-        new Padding(
+         Padding(
           padding: const EdgeInsets.only(top: 4.0),
           child: locationInfo,
         ),
         // Badges
-        new Padding(
+         Padding(
           padding: const EdgeInsets.only(top: 16.0),
-          child: new Text(
+          child:  Text(
             cat.description,
             style:
                 textTheme.body1.copyWith(color: Colors.white70, fontSize: 16.0),
           ),
         ),
-        new Padding(
+         Padding(
           padding: const EdgeInsets.only(top: 16.0),
-          child: new Row(
+          child:  Row(
             children: [
               _createCircleBadge(Icons.share, theme.accentColor),
               _createCircleBadge(Icons.phone, Colors.white12),
