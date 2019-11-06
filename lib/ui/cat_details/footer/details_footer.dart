@@ -10,7 +10,7 @@ class CatShowcase extends StatefulWidget {
   CatShowcase(this.cat);
 
   @override
-  _CatShowcaseState createState() => new _CatShowcaseState();
+  _CatShowcaseState createState() =>  _CatShowcaseState();
 }
 
 class _CatShowcaseState extends State<CatShowcase>
@@ -23,16 +23,16 @@ class _CatShowcaseState extends State<CatShowcase>
   initState() {
     super.initState();
     _tabs = [
-      new Tab(text: 'Pictures'),
-      new Tab(text: 'Details'),
-      new Tab(text: 'Cattributes'),
+       Tab(text: 'Pictures'),
+       Tab(text: 'Details'),
+       Tab(text: 'Cattributes'),
     ];
     _pages = [
-      new PicturesShowcase(widget.cat),
-      new DetailsShowcase(widget.cat),
-      new CattributesShowcase(widget.cat),
+       PicturesShowcase(widget.cat),
+       DetailsShowcase(widget.cat),
+       CattributesShowcase(widget.cat),
     ];
-    _controller = new TabController(
+    _controller =  TabController(
       length: _tabs.length,
       vsync: this,
     );
@@ -40,18 +40,18 @@ class _CatShowcaseState extends State<CatShowcase>
 
   @override
   Widget build(BuildContext context) {
-    return new Padding(
+    return  Padding(
       padding: const EdgeInsets.all(16.0),
-      child: new Column(
+      child:  Column(
         children: [
-          new TabBar(
+           TabBar(
             controller: _controller,
             tabs: _tabs,
             indicatorColor: Colors.white,
           ),
-          new SizedBox.fromSize(
+           SizedBox.fromSize(
             size: const Size.fromHeight(300.0),
-            child: new TabBarView(
+            child:  TabBarView(
               controller: _controller,
               children: _pages,
             ),

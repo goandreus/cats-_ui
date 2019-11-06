@@ -16,23 +16,23 @@ class CattributesShowcase extends StatelessWidget {
 
   _createCircleBadge(
     IconData iconData, Color bgColor, Color iconColor, String text) {
-      return new Padding(
+      return  Padding(
         padding: const EdgeInsets.only(left: 8.0),
-        child: new Stack(
+        child:  Stack(
           children: <Widget>[
-            new CircleAvatar(
+             CircleAvatar(
               backgroundColor: bgColor,
-              child: new Icon(
+              child:  Icon(
                 iconData,
                 color: iconColor,
                 size: 36.0,
               ),
               radius: 36.0,
             ),
-            new Positioned(
-              child: new Text(
+             Positioned(
+              child:  Text(
                 text,
-                style: new TextStyle(
+                style:  TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 10.0,
                   color: iconColor,
@@ -59,13 +59,13 @@ class CattributesShowcase extends StatelessWidget {
       items.add(badge);
     }
 
-    var delegate = new SliverGridDelegateWithFixedCrossAxisCount(
+    var delegate =  SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 4,
       crossAxisSpacing: 8.0,
       mainAxisSpacing: 8.0,
     );
 
-    return new GridView(
+    return  GridView(
       padding: const EdgeInsets.only(top: 16.0),
       gridDelegate: delegate,
       children: items
