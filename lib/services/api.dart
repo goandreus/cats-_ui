@@ -9,7 +9,7 @@ class CatApi {
   }
 
   static Cat _fromMap(Map<String, dynamic> map) {
-    return new Cat(
+    return  Cat(
       externalId: map['id'],
       name: map['name'],
       description: map['description'],
@@ -17,8 +17,8 @@ class CatApi {
       location: map['location'],
       likeCounter: map['like_counter'],
       isAdopted: map['adopted'],
-      pictures: new List<String>.from(map['pictures']),
-      cattributes: new List<String>.from(map['cattributes']),
+      pictures:  List<String>.from(map['pictures']),
+      cattributes:  List<String>.from(map['cattributes']),
     );
   }
 }
